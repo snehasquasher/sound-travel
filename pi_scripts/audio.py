@@ -1,10 +1,25 @@
 import pygame
+import sqlite3
 # import RPi.GPIO as GPIO
 import csv
 # module for handling sound in a python program 
 
 #Initializing pygame mixer module 
 pygame.mixer.init() 
+
+# audio file names 
+with open('pi_scripts/file_names.txt', 'r') as f:
+    lines = f.readlines()
+
+# Strip any leading or trailing whitespace from each line
+lines = [line.strip() for line in lines]
+
+# Convert the list to a set TO DO 
+my_set = set()
+for line in lines: 
+    my_set.add(int(line))
+
+print(my_set)
 
 #define audio files + associated locations on the world map 
 #creating sound_directory  
@@ -20,9 +35,11 @@ with open('recordings.csv','r') as file:
     for row in reader: 
         key = row[6]
         values = [float(row[4]),float(row[5])]
+        sound_id = int(row[0])
+        if sound_id in my_set: 
+            print(key)
+            sound_directory[key] = values
         
-        print(values)
-        sound_directory[key] = values
 print(len(sound_directory))
         
 #set-up the potentiometers
@@ -60,13 +77,19 @@ while True:
     # pot1_value = GPIO.input(pot1_pin)
     # pot2_value = GPIO.input(pot2_pin)
     # Map the potentiometer values to longitude and latitude
-    longitude, latitude = map_potentiometer_values(50, 80)
+    longitude, latitude = map_potentiometer_values(1200000,400)
     # Find the nearest audio file based on longitude and latitude
     nearest_location = find_nearest_audio_file(longitude, latitude)
     # Load and play the audio file
-    break
-    # sound = pygame.mixer.Sound(audio_file)
-    # sound.play()
+    audio_file_name = "/Users/snehasivakumar/CodingProjects/SoundTravel/sound-travel/samples_earth_fm/" + nearest_location + ".mp3"
+    print("nearest_location",nearest_location)
+    pygame.mixer.init() 
+    pygame.mixer.music.load(audio_file_name)
+    pygame.mixer.music.set_volume(0.5)
+    pygame.mixer.music.play()
+    
+    while pygame.mixer.music.get_busy():
+        pygame.time.Clock().tick(10)
 
 
 
