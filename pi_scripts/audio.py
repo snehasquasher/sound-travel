@@ -119,7 +119,7 @@ while True:
     cursor_x = sound_directory[nearest_location][5]
     print(sound_directory[nearest_location])
     print("x:",cursor_x, "y:",cursor_y)
-    audio_file_name = "/Users/snehasivakumar/CodingProjects/SoundTravel/sound-travel/samples_earth_fm/" + nearest_location + ".mp3"
+    audio_file_name = "/Users/snehasivakumar/CodingProjects/SoundTravel/sound-travel/samples_earth_fm/" + nearest_location
     print("nearest_location",nearest_location)
     pygame.mixer.init() 
     pygame.mixer.music.load(audio_file_name)
