@@ -64,24 +64,26 @@ def map_potentiometer_values(pot1_value, pot2_value):
     # Map the potentiometer values to longitude and latitude
     # longitude = pot1_value * 0.01 - 180.0
     # latitude = pot2_value * 0.01 - 90.0
-    longitude = map_range(pot1_value,-16,26512,-180,180)
-    latitude = map_range(pot2_value,-16,26512,-90,90)
+    x_axis = map_range(pot1_value,-16,26512,0,800)
+    y_axis = map_range(pot2_value,-16,26512,0,600)
     # Return the mapped longitude and latitude
-    return longitude, latitude
+    return x_axis,y_axis
 
-# function to find the nearest audio file based on longitude and latitude
-def find_nearest_audio_file(longitude, latitude):
+# function to find the nearest audio file based on x_axis and y_axis
+def find_nearest_audio_file(x_axis, y_axis):
     # Find the nearest audio file based on the distance from each location on the world map
     nearest_location = None
     nearest_distance = float("inf")
-    for name,location_data in sound_directory.items():
+    for file_name,location_data in sound_directory.items():
         #using the shortest distance formula --> hopefully this works 
-        distance = ((location_data[0] - longitude) ** 2 + (location_data[1] - latitude) ** 2) ** 0.5
+        distance = ((location_data[4] - x_axis) ** 2 + (location_data[5] - y_axis) ** 2) ** 0.5
         if distance < nearest_distance:
-            nearest_location = name
+            nearest_location_file_name = file_name
+            nearest_location = location_data[3:5]
             nearest_distance = distance
     # Return the audio file corresponding to the nearest location
-    return nearest_location
+    print(nearest_location)
+    return nearest_location_file_name
 
 #function to map the range of values 
 def map_range(value, from_low, from_high, to_low, to_high):
@@ -113,10 +115,10 @@ while True:
     nearest_location = find_nearest_audio_file(28.3949, 84.124)
     # Load and play the audio file
     
-    cursor_mappings_y = map_range(sound_directory[nearest_location][0],-90,90,0,600 )
-    cursor_mappings_x = map_range(sound_directory[nearest_location][1],-180,180,0,800 )
+    cursor_y = sound_directory[nearest_location][4]
+    cursor_x = sound_directory[nearest_location][5]
     print(sound_directory[nearest_location])
-    print("x:",cursor_mappings_y, "y:",cursor_mappings_x)
+    print("x:",cursor_x, "y:",cursor_y)
     audio_file_name = "/Users/snehasivakumar/CodingProjects/SoundTravel/sound-travel/samples_earth_fm/" + nearest_location + ".mp3"
     print("nearest_location",nearest_location)
     pygame.mixer.init() 
