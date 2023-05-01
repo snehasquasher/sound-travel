@@ -1,0 +1,63 @@
+file_name	latitude	longitude	region	location	x_coordinate	y_coordinate
+earth-fm_Mat-Eric-Hart_North-Sea-Waves_Overstrand-Beach-Norfolk-UK_Mat-Eric-Hart_96-24.mp3 	52.916029	1.350597	 England	 Norfolk	379	219
+earth-fm_George-Vlad_Calm-night-in-the-Sahel.mp3 	16.603769	-15.061838	 Senegal	 Degana	344	305
+earth-gm_George-Vlad_Winter-wind-in-snowy-forest.mp3 	47.127003	26.172846	 Romania	  Natural Park Vanaori Neamt	431	239
+earth-fm_George-Vlad_Atacama-desert-wind.mp3 	-23.238165	-67.463756	 Chile	 Atacama	220	432
+earth-fm_Ivo-Vicic_Thunderstorm-and-DC-1.mp3 	45.49557999	14.45556002	 Croatia	  Klana	416	246
+earth-fm_Kelly-Rafuse_Low-Tide-On-The-Rugged-Coast-Of-Redwood-National-Park_RX.mp3 	-41.58322	-124.09884	 USA	 Redwood National Park	207	241
+earth-fm_Marc-Anderson__Australia_Coastal_Forest.mp3 	-24.18943188	151.8128009	 Australia	" Eurimbula National Park, Queensland"	704	427
+earth-fm_Steven-Baber_Passo-Della-Mezzaluna.mp3 	44.00728	7.814071	 Italy	 Rezzo	398	245
+earth-fm_Marc-Anderson_Malaysia_Montane_Rainforest_RX.mp3 	3.70943516	101.7134738	 Malaysia	 Bukit Fraser	623	360
+earth-fn_Marc-Anderso_Borneo_Danum_Valley_Afternoon.mp3 	5.032030834	117.7516527	 Borneo	" Danum Valley, Sabah"	633	355
+earth-fm_Marc-Anderson_Waigeo-Rainforest.mp3 	-0.397041166	130.8117631	 Papua New Guinea	 Waigeo	696	383
+earth-fm_Marc-Anderson_Fiji_Rainforest.mp3 	-18.05983413	178.4420978	 Fiji	 Colo-i-Suva Forest Park	790	393
+Utria-National-Park-Morning-at-the-Mangroves_192.mp3 	6.058373	-77.36382	 Colombia	 Utria National Park	212	356
+earth-fm_Sounding-Wild_Thunder-Rain_Arratzu.mp3 	43.32401	-2.64014	 Spain	" Basque Country, Arratzu"	382	231
+earth-fm_Axel-Drioli_Cicada-Crescendo-Sounding-Wild_EDIT.mp3 	11.36619	103.482201	 Cambodia	 Phnom Penh	606	315
+soft_waves_black_sea_night_bulgaria_earth-experience.com_.mp3 	42.30051515	27.76803856	Bulgaria	" Primorsko,Mirius Bay"	440	243
+earth-fm_MelissaPons_A-Night-with-the-Wolves.mp3 	38.961277	-9.269844	 Portugal	 Mafra	360	260
+1-Hour-Bamboo-Forest-Wind_EarthFM_Nick-McMahan.mp3 	20.701029	-156.133635	 Hawaii	 Haleakala National Park	770	321
+earth-fm_George-Vlad_Nature-and-wildlife-sounds-from-the-African-savanna.mp3 	-22.572855	28.580217	 South Africa	 Mmabolela Estate	430	440
+earth-fm_GeorgeVlad_The-sounds-of-Madagascar-at-Tsingy-de-Bemaraha-320kbps.mp3 	-18.80956	44.834876	 Madagascar	 Tsingy de Bemaraha	480	410
+earth-fm_George-Vlad_African-night-sounds-Frogs-croaking-in-the-cloud-forest.mp3 	6.511936	39.25706	 Ethiopia	 Harenna Forest	460	344
+earth-fm_George-Vlad_Massive-Thunderstorm-Approaching-in-the-Amazon-Rainforest.mp3 	-5.346186	-71.002003	 Brazil	 Javari Valley	230	370
+earth-fm_George-Vlad_The-sounds-of-Mayan-ruins.mp3 	18.793981	-89.396483	 Mexico	 Yucatan Peninsula	178	319
+EarthFM-Amazon-Nick-McMahan_Final_.mp3 	-0.466516801	-75.34935627	Ecuador	 Amazon	203	370
+earth-fm_George-Vlad_Madagascar-Dry-Forest-Sounds.mp3 	-20.737934	44.255098	 Madagascar	 Western Madagascar	472	423
+earth-fm_Veronica-Cerrotta_waterfall.mp3 	-22.111271	-42.973659	 Brazil	 Rio de Janeiro	280	419
+earth-fm_Khristos_2022.09.11-First-Stirrings-of-First-Light-in-a-Pine-Forest_3.mp3 	-35.5895	138.273356	 Australia	 Fleurieu Peninsula	690	460
+earth-fm_khristos-nizamis_2019.09.25-Dawn-at-Tapanappa-Creek-in-Early-Spring.mp3 	-35.631013	138.267143	 Australia	 Deep Creek National Park	688	466
+earth-fm_Khristos-N_Mallee-Dawn-in-Spring_EDIT.mp3 	-33.696316	140.128207	 Australia	 Gluepot Reserve	690	446
+earth-fm_Kelly-Rafuse_North-Fork-Sacramento-River-Meadow-Stream-Dawn-A.mp3 	41.30267	-122.47257	 USA	" Klamath Mountains, Siskiyou County,California"	115	244
+earthfm_Melissa_Ivarsbo_dawn-chorus-of-Spring-in-a-Swedish-Forest-1.mp3 	58.255914	12.063565	 Sweden	 Ljungskile	412	188
+Amieira_Dawn_Forest-1.mp3 	38.2747442	-7.5490977	 Portugal	 Alentejo	361	258
+earth-fm_George-Vlad_Thunderstorm-and-high-winds-on-the-Sanetti-plateau-in-Ethiopia_EDIT.mp3 	6.849071	39.835707	 Ethiopia	 Sanetti plateau	460	350
+earth-fm_George-Vlad_The-weird-and-fascianting-sound-of-empress-cicada-rainforest-sounds_EDIT.mp3 	5.848402	117.938852	 Borneo	" ""Sabahs rainforests"""	635	352
+earth-fm_George-Vlad_Serengeti-sounds-Lions-and-hippos-calling-in-the-African-Savanna_EDIT.mp3 	-2.17675	34.897888	 Tanzania	 Mau-Mara-Serengeti	456	384
+earth-fm_George-Vlad_Pure-Sound-of-rain-in-the-forest_EDIT.mp3 	50.934663	-0.724448	 England	 Chichester	377	224
+earth-fm_George-Vlad_Italian-countryside-sounds_EDIT.mp3 	43.451882	11.016236	 Italy	 Tuscany	412	258
+earth-fm_George-Vlad_Epic-thunderstorm-over-Johannesburg_EDIT.mp3 	-25.744226	28.965255	 South Africa	 Johannesburg	437	432
+earth-fm_George-Vlad_chromatic-rain-in-the-Namib-desert_EDIT.mp3 	-24.72786	15.470577	 Namibia	 Dead Vlei	414	426
+earth-fm_George-Vlad_Cave-sounds-Bats-in-the-cenote_EDIT.mp3 	20.664317	-88.541542	 Mexico	 Yucatan	176	318
+earth-fm_George-Vlad_What-does-an-active-volcano-sound-like_EDIT.mp3 	13.60689	40.661694	 Ethiopia	 Erta Ale	455	345
+earth-fm_George-Vlad_African-savanna-sounds-Call-of-the-owl_EDIT-1h.mp3 	-2.256199	38.321273	 Kenya	 Kanderi Swamps	460	370
+Thrush_-nightingale_1_Hour_Recording.mp3 	58.421056	26	 Estonia	 Alam-Pedja Nature Reserve	434	200
+10_Sweden_Pine_Forest.mp3 	60.29208256	14.83909911	 Sweden	 Kullen	412	194
+6_Spain_Pinsapo_Forest_Dawn.mp3 	36.66732713	-5.038332612	 Spain	 Parque Nacional Sierra de las Nieves	373	265
+4_Tasmania_Old_Growth_Forest.mp3 	-41.42209943	145.9644388	 Tasmania	 Leven River Valley	700	479
+2_Malaysia_Merapoh_Rainforest_Night.mp3 	4.661519963	102.1187977	 Malaysia	 Taman Negara	597	350
+1_Nepal_Langtang_River.mp3 	28.17176119	85.4373675	 Nepal	 Langtang National Park	563	294
+Creek-and-birds-in-Zagreb.mp3 	45.925104	16.018262	 Croatia	 Zagreb	413	243
+Crackly-campifire-in-Voloderac.mp3 	45.553984	16.700048	 Croatia	 Voloder	416	248
+22-Dawn-some-insects-birds-distant-sea-waves-Trindade-Brazil.mp3 	-23.05381	-44.650632	 Brazil	 Serra da Bocaina Reserve	270	426
+19-Night-fire-bonfire-distant-crickets-a-few-birds.mp3 	5.228953	-73.836216	 Colombia	 Farallones De Sutatausa	211	360
+Australia-Bushland-Afternoon.mp3 	-31.3396875	151.8525625	 Australia	 Mummel Gulf National Park	710	437
+Australia-Tall-Eucalypt-Forest.mp3 	-31.8534217	151.5172457	 Australia	 Barrington Tops	703	451
+Java-Mountain-Stream-at-Night.mp3 	-6.702511	106.5227	 Indonesia	 Gunung Halimun National Park	616	386
+Thailand-Wetland.mp3 	8.4501414	98.5255317	 Thailand	 Sri Phang Nga National Park	594	341
+Thailand-Tropical-Woodland.mp3 	15.6086432	99.320848	 Thailand	 Huai Kha Khaeng Wildlife Sanctuary	597	324
+Evening-in-the-mountains-of-Thailand.mp3 	19.9966004	99.144325	 Thailand	 Doi Pha Hom Pok National Park	596	315
+Rainforest-sounds-Calm-creek-in-the-jungle.mp3 	9.49125	-83.912083	 Costa Rica	 San José Province	186	337
+Dusk-by-the-river-in-the-Amazon-rainforest-Jungle-sounds.mp3 	-11.581056	-70.666694	 Peru	 Reserva territorial Madre de Dios	217	395
+Beautiful-birdsong-in-the-African-savanna.mp3 	-22.821778	28.079361	 South Africa	 Lephalale Local Municipality	420	443
+Calm-rain-in-the-Amazon-jungle-rainforest-sounds.mp3 	-11.581056	-70.666694	 Peru	 Reserva territorial Madre de Dios	217	398

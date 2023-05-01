@@ -7,22 +7,25 @@ import csv
 #Initializing pygame mixer module 
 pygame.mixer.init() 
 
-# audio file names 
-with open('pi_scripts/file_names.txt', 'r') as f:
-    lines = f.readlines()
+# audio file names dictionary mapping 
+with open('pi_scripts/audio_id_file_name.csv','r') as file: 
+    reader = csv.reader(file)
+    #skip the header row 
+    next(reader)
+    
+    #create dict to store data 
+    audio_ids = {}
+    
+    #traverse each row in the CSV file and add them to the dict 
+    for row in reader: 
+       
+        audio_id = int(row[0])
+        file_name = row[1]
+        audio_ids[audio_id] = file_name
 
-# Strip any leading or trailing whitespace from each line
-lines = [line.strip() for line in lines]
 
-# Convert the list to a set TO DO 
-my_set = set()
-for line in lines: 
-    my_set.add(int(line))
-
-print(my_set)
-
-#define audio files + associated locations on the world map 
-#creating sound_directory  
+# define audio files + associated locations on the world map 
+# creating sound_directory  
 with open('recordings.csv','r') as file: 
     reader = csv.reader(file)
     #skip the header row 
@@ -33,14 +36,21 @@ with open('recordings.csv','r') as file:
     
     #traverse each row in the CSV file and add them to the dict 
     for row in reader: 
-        key = row[6]
-        values = [float(row[4]),float(row[5])]
-        sound_id = int(row[0])
-        if sound_id in my_set: 
-            print(key)
-            sound_directory[key] = values
+        region = row[6]
+        location = row[7]
+        sound_id = row[16]
+        values = [float(row[4]),float(row[5]),region,location] #latitude,longitude,location
+        if sound_id != '' and int(sound_id) in audio_ids: 
+            file_name = audio_ids[int(sound_id)]
+            sound_directory[file_name] = values
         
-print(len(sound_directory))
+    #write to a csv file 
+    for key,value in sound_directory.items(): 
+        print(key,value)
+        
+    with open('output.csv','w',newline = '') as file: 
+        writer = csv.writer(file)
+        writer.writerow(zip(sound_directory.keys(),sound_directory.values()))
         
 #set-up the potentiometers
 # pot1_pin = 18
@@ -52,8 +62,10 @@ print(len(sound_directory))
 # function mapping potentiometer values to longitude and latitude
 def map_potentiometer_values(pot1_value, pot2_value):
     # Map the potentiometer values to longitude and latitude
-    longitude = pot1_value * 0.01 - 180.0
-    latitude = pot2_value * 0.01 - 90.0
+    # longitude = pot1_value * 0.01 - 180.0
+    # latitude = pot2_value * 0.01 - 90.0
+    longitude = map_range(pot1_value,-16,26512,-180,180)
+    latitude = map_range(pot2_value,-16,26512,-90,90)
     # Return the mapped longitude and latitude
     return longitude, latitude
 
@@ -71,16 +83,40 @@ def find_nearest_audio_file(longitude, latitude):
     # Return the audio file corresponding to the nearest location
     return nearest_location
 
-# Main loop
+#function to map the range of values 
+def map_range(value, from_low, from_high, to_low, to_high):
+    """
+    Map a value from one range to another range.
+    
+    Parameters:
+        value (float): The value to be mapped.
+        from_low (float): The lower bound of the input range.
+        from_high (float): The upper bound of the input range.
+        to_low (float): The lower bound of the output range.
+        to_high (float): The upper bound of the output range.
+    
+    Returns:
+        float: The mapped value.
+    """
+    from_range = from_high - from_low
+    to_range = to_high - to_low
+    scaled_value = (float(value - from_low) / float(from_range))
+    return to_low + (scaled_value * to_range)
+
 while True:
     # Read the potentiometer values
     # pot1_value = GPIO.input(pot1_pin)
     # pot2_value = GPIO.input(pot2_pin)
     # Map the potentiometer values to longitude and latitude
-    longitude, latitude = map_potentiometer_values(1200000,400)
+    #longitude, latitude = map_potentiometer_values(27,133)
     # Find the nearest audio file based on longitude and latitude
-    nearest_location = find_nearest_audio_file(longitude, latitude)
+    nearest_location = find_nearest_audio_file(28.3949, 84.124)
     # Load and play the audio file
+    
+    cursor_mappings_y = map_range(sound_directory[nearest_location][0],-90,90,0,600 )
+    cursor_mappings_x = map_range(sound_directory[nearest_location][1],-180,180,0,800 )
+    print(sound_directory[nearest_location])
+    print("x:",cursor_mappings_y, "y:",cursor_mappings_x)
     audio_file_name = "/Users/snehasivakumar/CodingProjects/SoundTravel/sound-travel/samples_earth_fm/" + nearest_location + ".mp3"
     print("nearest_location",nearest_location)
     pygame.mixer.init() 
