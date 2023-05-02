@@ -4,40 +4,40 @@ import sqlite3
 import csv
 # module for handling sound in a python program 
 import time
-import board
-import busio
-import sys 
-import adafruit_ads1x15.ads1115 as ADS 
-from adafruit_ads1x15.analog_in import AnalogIn
+# import board
+# import busio
+# import sys 
+# import adafruit_ads1x15.ads1115 as ADS 
+# from adafruit_ads1x15.analog_in import AnalogIn
 import serial
 from datetime import datetime
 
 
-ser = serial.Serial(
-        port='/dev/ttyUSB0',
-        baudrate = 115200,
-        parity=serial.PARITY_NONE,
-        stopbits=serial.STOPBITS_ONE,
-        bytesize=serial.EIGHTBITS,
-        timeout=1
-        )
+# ser = serial.Serial(
+#         port='/dev/ttyUSB0',
+#         baudrate = 115200,
+#         parity=serial.PARITY_NONE,
+#         stopbits=serial.STOPBITS_ONE,
+#         bytesize=serial.EIGHTBITS,
+#         timeout=1
+#         )
 
 
 
 #sound set-up 
 
-# Create the I2C bus
-i2c = busio.I2C(board.SCL, board.SDA)
+# # Create the I2C bus
+# i2c = busio.I2C(board.SCL, board.SDA)
 
-# Create the ADC object using the I2C bus
-ads = ADS.ADS1115(i2c)
+# # Create the ADC object using the I2C bus
+# ads = ADS.ADS1115(i2c)
 
-# Create single-ended input on channel 0
-chan0 = AnalogIn(ads, ADS.P0)
-chan1 = AnalogIn(ads, ADS.P1)
+# # Create single-ended input on channel 0
+# chan0 = AnalogIn(ads, ADS.P0)
+# chan1 = AnalogIn(ads, ADS.P1)
 
-# Create differential input between channel 0 and 1
-chan = AnalogIn(ads, ADS.P0, ADS.P1)
+# # Create differential input between channel 0 and 1
+# chan = AnalogIn(ads, ADS.P0, ADS.P1)
 
 
 #Initializing pygame mixer module 
@@ -140,11 +140,11 @@ while True:
     #print("2: {:>5}\t{:>5.3f}".format(, chan1.voltage))
     #time.sleep(0.5)
     
-    pot_1 = chan0.value 
-    pot_2 = chan1.value
-    print("POT: {:>5}\t{:>5.3f}".format(pot_1, pot_2))
+    # pot_1 = chan0.value 
+    # pot_2 = chan1.value
+    # print("POT: {:>5}\t{:>5.3f}".format(pot_1, pot_2))
     # Map the potentiometer values to longitude and latitude
-    x_axis, y_axis = map_potentiometer_values(pot_1,pot_2)
+    x_axis, y_axis = map_potentiometer_values(200,100)
     # Find the nearest audio file based on longitude and latitude
     nearest_location = find_nearest_audio_file(x_axis, y_axis)
     
@@ -170,22 +170,25 @@ while True:
         print("X,Y: {:>5}\t{:>5}".format(x, y))
         time.sleep(2)
         """
-        pygame.mixer.music.load(audio_file_name)
-        
-        pygame.mixer.music.play()
+        try: 
+            pygame.mixer.music.load(audio_file_name)
+        except pygame.error as e:
+            print("file is not found") 
+        else:    
+            pygame.mixer.music.play()
         
     else:
         pass
         
     x = int(x_axis)
     y = int(y_axis)
-    print("X,Y: {:>5}\t{:>5}".format(x, y))
-    serial_string = f'#0({x},{y})*'
-    byte_str = serial_string.encode('utf-8')
+    # print("X,Y: {:>5}\t{:>5}".format(x, y))
+    # serial_string = f'#0({x},{y})*'
+    # byte_str = serial_string.encode('utf-8')
     
-    start_sec = datetime.now().second
-    ser.write(byte_str)
-    print("WRITING")
+    # start_sec = datetime.now().second
+    # ser.write(byte_str)
+    # print("WRITING")
     time.sleep(2)
     #"""
     start = time.time()
