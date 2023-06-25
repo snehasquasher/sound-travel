@@ -3,12 +3,12 @@ capturing global sounds in a unique manner
 
 In building Sonus, we drew inspiration from a variety of existing products, both audio and others. Today, when we think of audio we associate it with digital platforms, apps like spotify, apple podcasts and products like wireless headphones, home assistants like Alexa etc. With our project, given the focus on building something physical and tangible we first sought inspiration from the radio and are focus was building a product that comprised of both analog and digital aspects. 
 
-The Sonus
+# The Sonus
 ![IMG_3276 copy](https://github.com/snehasquasher/sound-travel/assets/65848151/7b5c4ffd-aca5-46d2-b36d-f4fd82fa91b9)
 Demo
 https://github.com/snehasquasher/sound-travel/assets/65848151/d482306b-24e8-4ca6-bb4d-89d787a50891
 
-Our Process
+# Our Process
 With a project utilizing both hardware and software components, we had to spend extensive time planning the parts we wanted to use to ensure quality and compatibility.
 The core of our product is the Raspberry Pi, a microcontroller that runs the main code and orchestrates all the other components of the Sonus. 
 We spent a lot of time deciding between microcontrollers based on our needs for both audio and display capabilities. The raspberry pi ended up being the most powerful and effective of our options and is now the control board for the entire product.
